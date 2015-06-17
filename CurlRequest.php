@@ -96,7 +96,7 @@ class CurlRequest
      *
      * @return self
      */
-    public function setDefaultGetOptions($connectTimeOut = 5, $timeOut = 10, $dnsCacheTimeOut = 600, $followLocation = true, $maxRedirs = 5)
+    public function setDefaultGetOptions($connectTimeOut = 5, $timeOut = 4, $dnsCacheTimeOut = 600, $followLocation = true, $maxRedirs = 5)
     {
         $this->setOpt(CURLOPT_AUTOREFERER,       1)
              ->setOpt(CURLOPT_FOLLOWLOCATION,    $followLocation)
