@@ -36,7 +36,7 @@ class ProxyChecker
     private function setTester($tester)
     {
         if ($tester === null || empty($tester)) {
-            throw new \Exception('You MUST set the URL where is served the file `web/test.php`');
+            throw new \Exception('You MUST set the URL');
         }
 
         $this->tester = $tester;
