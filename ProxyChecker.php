@@ -57,14 +57,15 @@ class ProxyChecker
      * Test if a HTTP proxy works
      *
      * @param string $proxy
+     *  @param bool $checkAnonymous
      *
      * @return mixed TRUE if the proxy is ready to use... else the error (transparent or cURL errors)
      */
-    public function isProxyValid($proxy) {
+    public function isProxyValid($proxy, $checkAnonymous=false) {
         $url = $this->tester;
         $curl = new CurlRequest($url);
         $output = $curl->setDefaultGetOptions()->setDestkopUserAgent()->setProxy($proxy)->execute();
-        return $curl->hasError() ? $curl->getErrors() : self::isAnonymeProxy($proxy, $output);
+        return $curl->hasError() ? $curl->getErrors() : ($checkAnonymous?self::isAnonymeProxy($proxy, $output):true);
     }
 
     private static function isAnonymeProxy($proxy, $output)
