@@ -1,8 +1,4 @@
 <?php
-namespace rOpenDev\proxy;
-
-use rOpenDev\curl\CurlRequest;
-
 class ProxyChecker
 {
 

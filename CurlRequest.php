@@ -1,6 +1,4 @@
 <?php
-namespace rOpenDev\curl;
-
 /**
  * PHP POO cURL wrapper
  * Make it easy to request a URL (or few)

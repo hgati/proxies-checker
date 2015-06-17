@@ -1,0 +1,7 @@
+{
+	"name": "hgati/proxies-checker",
+	
+	"autoload": {
+		"classmap": ["web/"]
+	}
+}
