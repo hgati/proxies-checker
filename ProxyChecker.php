@@ -87,7 +87,7 @@ class ProxyChecker
      *
      * @return bool TRUE if is valid for Google... else FALSE
      */
-    function isProxyValidForGoogle($proxy)
+    public function isProxyValidForGoogle($proxy)
     {
         $url = 'https://www.google.fr/search?q=site:www.robin-d.fr';
         $curl = new CurlRequest($url);
