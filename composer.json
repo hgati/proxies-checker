@@ -1,6 +1,14 @@
 {
 	"name": "hgati/proxies-checker",
 	
+	"repositories": [
+		{"type": "git", "url": "https://github.com/hgati/UserAgent.git" }
+	]
+	
+	"require": {
+		"hgati/useragent": "dev-master"
+	},
+		
 	"autoload": {
 		"classmap": ["CurlRequest.php", "ProxyChecker.php"]
 	}
