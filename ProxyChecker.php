@@ -65,7 +65,11 @@ class ProxyChecker
         $url = $this->tester;
         $curl = new CurlRequest($url);
         $output = $curl->setDefaultGetOptions()->setDestkopUserAgent()->setProxy($proxy)->execute();
-        return $curl->hasError() ? $curl->getErrors() : ($checkAnonymous?self::isAnonymeProxy($proxy, $output):true);
+        if($checkAnonymous){
+        	return $curl->hasError() ? $curl->getErrors() : self::isAnonymeProxy($proxy, $output);
+        }else{
+        	return $curl->hasError() ? $curl->getErrors() : true;
+        }
     }
 
     private static function isAnonymeProxy($proxy, $output)
