@@ -61,7 +61,7 @@ class ProxyChecker
      *
      * @return mixed TRUE if the proxy is ready to use... else the error (transparent or cURL errors)
      */
-    public function isProxyValid($proxy, $checkAnonymous=false) {
+    public function isProxyValid($proxy, $checkAnonymous=true) {
         $url = $this->tester;
         $curl = new CurlRequest($url);
         $output = $curl->setDefaultGetOptions()->setDestkopUserAgent()->setProxy($proxy)->execute();
