@@ -2,6 +2,6 @@
 	"name": "hgati/proxies-checker",
 	
 	"autoload": {
-		"classmap": ["web/"]
+		"classmap": ["CurlRequest.php", "ProxyChecker.php"]
 	}
 }

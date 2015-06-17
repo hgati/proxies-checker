@@ -1,7 +1,6 @@
 <?php
 class ProxyChecker
 {
-
     private $tester;
 
     private static $headersToScan = [
