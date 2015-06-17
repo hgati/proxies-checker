@@ -203,7 +203,7 @@ class CurlRequest
      */
     public function setDestkopUserAgent()
     {
-        $this->setUserAgent('Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:28.0) Gecko/20100101 Firefox/28.0');
+        $this->setUserAgent('Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36');
 
         return $this;
     }
